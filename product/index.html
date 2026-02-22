@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="product-container" id="productContainer">
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        const container = document.getElementById("productContainer");
+
+        products.forEach((item) => {
+            container.innerHTML += `
+    <div class="product-card">
+        <img src="${item.image}" width="150">
+        <h3>${item.name}</h3>
+        <p>₹${item.price}</p>
+        <button>Add to Cart</button>
+    </div>
+  `;
+        });
+    </script>
+</body>
+
+</html>
+
+
+<-data.js->
+
+    // data.js
+
+    const products = [
+    {
+    id: 1,
+    name: "Red T-Shirt",
+    price: 499,
+    image: "images/tshirt.jpg"
+    },
+    {
+    id: 2,
+    name: "Sports Shoes",
+    price: 1999,
+    image: "images/shoes.jpg"
+    },
+    {
+    id: 3,
+    name: "Smart Watch",
+    price: 2999,
+    image: "images/watch.jpg"
+    }
+    ];
